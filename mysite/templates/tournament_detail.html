@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кубок Ульяновска 2026 — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:tournaments' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <img class="logo-image" src="{% static 'img/logo.svg' %}" alt="Логотип FOOT73" width="44" height="44">
+      <span class="logo-text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="main-menu" aria-label="Основное меню">
+      <a class="active" href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="#">Таблицы</a>
+      <a href="#">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header-buttons">
+      <a class="btn btn-orange" href="{% url 'league:tournaments' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="section section-small-bottom page-intro">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="{% url 'league:home' %}">Главная</a><span aria-hidden="true">/</span><a href="{% url 'league:tournaments' %}">Турниры</a><span aria-hidden="true">/</span>Кубок Ульяновска 2026
+    </nav>
+    <span class="badge badge-green">Идут заявки</span>
+    <h1 class="detail-title">Кубок Ульяновска 2026</h1>
+    <p class="lead">Главный кубок сезона среди любительских команд Ульяновска. Групповой этап и плей-офф, матчи по будням вечером.</p>
+  </div>
+</section>
+
+<section class="section section-small-top">
+  <div class="container">
+    <div class="two-columns">
+      <article class="card">
+        <h2 class="small-heading">Информация о турнире</h2>
+        <div class="facts">
+          <div class="fact"><span>Формат</span><b>5×5</b></div>
+          <div class="fact"><span>Даты проведения</span><b>12 ноября — 20 декабря</b></div>
+          <div class="fact"><span>Площадка</span><b>Манеж «Спартак»</b></div>
+          <div class="fact"><span>Взнос</span><b>4 500 ₽</b></div>
+        </div>
+        <div class="teams-count">
+          <span>Заявлено команд</span>
+          <b>14 из 16</b>
+        </div>
+        <a class="btn btn-black" href="{% url 'league:tournaments' %}">Подать заявку</a>
+      </article>
+
+      <article class="card">
+        <h2 class="small-heading">Таблица</h2>
+        <div class="table-wrapper">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="center">#</th>
+                <th>Команда</th>
+                <th class="center">И</th>
+                <th class="center hide-mobile">В</th>
+                <th class="center hide-mobile">Н</th>
+                <th class="center hide-mobile">П</th>
+                <th class="right">О</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+ <footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-column footer-about">
+        <b>FOOT73</b>
+        <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
+      </div>
+      <div class="footer-column">
+        <b>Разделы</b>
+        <a href="{% url 'league:tournaments' %}">Турниры</a>
+        <a href="#">Таблицы</a>
+        <a href="#">Команды</a>
+        <a href="{% url 'league:home' %}#about">О лиге</a>
+      </div>
+      <div class="footer-column">
+        <b>Контакты</b>
+        <span>+7 900 000-00-00</span>
+        <span>info@foot73.ru</span>
+        <span>Ульяновск, ул. Северный Венец, 32</span>
+      </div>
+    </div>
+    <div class="footer-big" aria-hidden="true">FOOT73</div>
+    <div class="footer-bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
