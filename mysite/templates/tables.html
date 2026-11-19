@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Таблицы — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a href="{% url 'league:tournaments' %}">Турниры</a>
+      <a class="is-active" href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section section--tight-bottom">
+    <div class="container">
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span>Таблицы</div>
+      <h1 class="h1">Таблицы</h1>
+      <p class="lead mt-12">Положение команд в дивизионах сезона 2026/2027. Обновляется после каждого тура.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight-top">
+    <div class="container stack">
+
+      <article class="card">
+        <div class="spread mb-8">
+          <h2 class="h3">Высшая лига</h2>
+          <span class="small muted">2-й тур</span>
+        </div>
+        <div class="table-scroll">
+          <table class="table table--standings">
+            <thead>
+              <tr>
+                <th class="num">#</th>
+                <th>Команда</th>
+                <th class="num">И</th>
+                <th class="num hide-sm">В</th>
+                <th class="num hide-sm">Н</th>
+                <th class="num hide-sm">П</th>
+                <th class="num right">О</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-lead">
+                <td class="num">1</td>
+                <td>Волга</td>
+                <td class="num">18</td>
+                <td class="num hide-sm">14</td>
+                <td class="num hide-sm">2</td>
+                <td class="num hide-sm">2</td>
+                <td class="num right"><b>44</b></td>
+              </tr>
+              <tr>
+                <td class="num">2</td>
+                <td>Симбирск</td>
+                <td class="num">18</td>
+                <td class="num hide-sm">13</td>
+                <td class="num hide-sm">3</td>
+                <td class="num hide-sm">2</td>
+                <td class="num right"><b>42</b></td>
+              </tr>
+              <tr>
+                <td class="num">3</td>
+                <td>Торпедо</td>
+                <td class="num">18</td>
+                <td class="num hide-sm">11</td>
+                <td class="num hide-sm">3</td>
+                <td class="num hide-sm">4</td>
+                <td class="num right"><b>36</b></td>
+              </tr>
+              <tr>
+                <td class="num">4</td>
+                <td>Динамо-УлГУ</td>
+                <td class="num">18</td>
+                <td class="num hide-sm">10</td>
+                <td class="num hide-sm">2</td>
+                <td class="num hide-sm">6</td>
+                <td class="num right"><b>32</b></td>
+              </tr>
+              <tr>
+                <td class="num">5</td>
+                <td>Авангард</td>
+                <td class="num">18</td>
+                <td class="num hide-sm">8</td>
+                <td class="num hide-sm">4</td>
+                <td class="num hide-sm">6</td>
+                <td class="num right"><b>28</b></td>
+              </tr>
+              <tr>
+                <td class="num">6</td>
+                <td>Заря</td>
+                <td class="num">18</td>
+                <td class="num hide-sm">6</td>
+                <td class="num hide-sm">5</td>
+                <td class="num hide-sm">7</td>
+                <td class="num right"><b>23</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="spread mb-8">
+          <h2 class="h3">Первая лига</h2>
+          <span class="small muted">2-й тур</span>
+        </div>
+        <div class="table-scroll">
+          <table class="table table--standings">
+            <thead>
+              <tr>
+                <th class="num">#</th>
+                <th>Команда</th>
+                <th class="num">И</th>
+                <th class="num hide-sm">В</th>
+                <th class="num hide-sm">Н</th>
+                <th class="num hide-sm">П</th>
+                <th class="num right">О</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-lead">
+                <td class="num">1</td>
+                <td>Локомотив</td>
+                <td class="num">16</td>
+                <td class="num hide-sm">12</td>
+                <td class="num hide-sm">2</td>
+                <td class="num hide-sm">2</td>
+                <td class="num right"><b>38</b></td>
+              </tr>
+              <tr>
+                <td class="num">2</td>
+                <td>Спартак</td>
+                <td class="num">16</td>
+                <td class="num hide-sm">10</td>
+                <td class="num hide-sm">4</td>
+                <td class="num hide-sm">2</td>
+                <td class="num right"><b>34</b></td>
+              </tr>
+              <tr>
+                <td class="num">3</td>
+                <td>Восток</td>
+                <td class="num">16</td>
+                <td class="num hide-sm">8</td>
+                <td class="num hide-sm">3</td>
+                <td class="num hide-sm">5</td>
+                <td class="num right"><b>27</b></td>
+              </tr>
+              <tr>
+                <td class="num">4</td>
+                <td>Ротор</td>
+                <td class="num">16</td>
+                <td class="num hide-sm">5</td>
+                <td class="num hide-sm">2</td>
+                <td class="num hide-sm">9</td>
+                <td class="num right"><b>17</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
+        <b>FOOT73</b>
+        <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
+      </div>
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="{% url 'league:tournaments' %}">Турниры</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <span>+7 900 000-00-00</span>
+        <span>info@foot73.ru</span>
+        <span>Ульяновск, ул. Северный Венец, 32</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

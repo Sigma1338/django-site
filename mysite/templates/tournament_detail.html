@@ -4,118 +4,266 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Кубок Ульяновска 2026 — FOOT73</title>
+  <title>Кубок Ульяновска — FOOT73</title>
   <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
 <div class="topbar">
-  <div class="container topbar-inner">
+  <div class="container topbar__inner">
     <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
-    <a href="{% url 'league:tournaments' %}">Приём заявок до 20 ноября &rarr;</a>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
   </div>
 </div>
-<header class="site-header">
-  <div class="container header-inner">
+
+<header class="header">
+  <div class="container header__inner">
     <a class="logo" href="{% url 'league:home' %}">
-      <img class="logo-image" src="{% static 'img/logo.svg' %}" alt="Логотип FOOT73" width="44" height="44">
-      <span class="logo-text"><b>FOOT73</b><small>Ульяновск</small></span>
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
     </a>
 
-    <nav class="main-menu" aria-label="Основное меню">
-      <a class="active" href="{% url 'league:tournaments' %}">Турниры</a>
-      <a href="#">Таблицы</a>
-      <a href="#">Команды</a>
+    <nav class="nav" aria-label="Основное меню">
+      <a class="is-active" href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
       <a href="{% url 'league:home' %}#about">О лиге</a>
     </nav>
 
-    <div class="header-buttons">
-      <a class="btn btn-orange" href="{% url 'league:tournaments' %}">Подать заявку</a>
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
     </div>
   </div>
 </header>
 
 <main>
 
-<section class="section section-small-bottom page-intro">
-  <div class="container">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="{% url 'league:home' %}">Главная</a><span aria-hidden="true">/</span><a href="{% url 'league:tournaments' %}">Турниры</a><span aria-hidden="true">/</span>Кубок Ульяновска 2026
-    </nav>
-    <span class="badge badge-green">Идут заявки</span>
-    <h1 class="detail-title">Кубок Ульяновска 2026</h1>
-    <p class="lead">Главный кубок сезона среди любительских команд Ульяновска. Групповой этап и плей-офф, матчи по будням вечером.</p>
-  </div>
-</section>
+  <section class="section section--tight-bottom">
+    <div class="container">
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span><a href="{% url 'league:tournaments' %}">Турниры</a><span>/</span>Кубок Ульяновска</div>
+      <div class="spread" style="align-items:flex-start;flex-wrap:wrap">
+        <div>
+          <span class="badge badge--success">Идут заявки</span>
+          <h1 class="h1 mt-12">Кубок Ульяновска по мини-футболу</h1>
+          <p class="lead mt-12">Главный любительский турнир сезона. 12 команд, групповой этап и плей-офф.</p>
+        </div>
+        <a class="btn btn--accent btn--lg" href="{% url 'league:apply' %}">Подать заявку</a>
+      </div>
 
-<section class="section section-small-top">
-  <div class="container">
-    <div class="two-columns">
-      <article class="card">
-        <h2 class="small-heading">Информация о турнире</h2>
-        <div class="facts">
-          <div class="fact"><span>Формат</span><b>5×5</b></div>
-          <div class="fact"><span>Даты проведения</span><b>12 ноября — 20 декабря</b></div>
-          <div class="fact"><span>Площадка</span><b>Манеж «Спартак»</b></div>
-          <div class="fact"><span>Взнос</span><b>4 500 ₽</b></div>
-        </div>
-        <div class="teams-count">
-          <span>Заявлено команд</span>
-          <b>14 из 16</b>
-        </div>
-        <a class="btn btn-black" href="{% url 'league:tournaments' %}">Подать заявку</a>
-      </article>
-
-      <article class="card">
-        <h2 class="small-heading">Таблица</h2>
-        <div class="table-wrapper">
-          <table class="table">
-            <thead>
-              <tr>
-                <th class="center">#</th>
-                <th>Команда</th>
-                <th class="center">И</th>
-                <th class="center hide-mobile">В</th>
-                <th class="center hide-mobile">Н</th>
-                <th class="center hide-mobile">П</th>
-                <th class="right">О</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-        </div>
-      </article>
+      <div class="tabs">
+        <a class="is-active" href="#overview">Обзор</a>
+        <a href="#table">Таблица</a>
+        <a href="#matches">Матчи</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="#docs">Регламент</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section section--tight-top">
+    <div class="container">
+      <div class="grid split">
+
+        <div class="stack">
+
+          <div class="card" id="overview">
+            <h2 class="h3">О турнире</h2>
+            <p class="mt-12">Кубок Ульяновска проходит по правилам мини-футбола 5×5. Сначала групповой этап в двух дивизионах, затем плей-офф среди двух лучших команд каждого дивизиона.</p>
+            <p class="mt-12 muted">Матчи проходят по выходным, продолжительность — 2 тайма по 20 минут. Заявка рассматривается организатором в течение одного рабочего дня.</p>
+          </div>
+
+          <div class="card" id="table">
+            <div class="spread mb-8">
+              <h2 class="h3">Турнирная таблица</h2>
+              <span class="small muted">Высшая лига · 5-й тур</span>
+            </div>
+            <div class="table-scroll">
+              <table class="table table--standings">
+                <thead>
+                  <tr>
+                    <th class="num">#</th>
+                    <th>Команда</th>
+                    <th class="num">И</th>
+                    <th class="num hide-sm">В</th>
+                    <th class="num hide-sm">Н</th>
+                    <th class="num hide-sm">П</th>
+                    <th class="num right">Очки</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="is-lead">
+                    <td class="num">1</td>
+                    <td>Волга</td>
+                    <td class="num">5</td>
+                    <td class="num hide-sm">4</td>
+                    <td class="num hide-sm">0</td>
+                    <td class="num hide-sm">1</td>
+                    <td class="num right"><b>12</b></td>
+                  </tr>
+                  <tr>
+                    <td class="num">2</td>
+                    <td>Зенит</td>
+                    <td class="num">5</td>
+                    <td class="num hide-sm">3</td>
+                    <td class="num hide-sm">1</td>
+                    <td class="num hide-sm">1</td>
+                    <td class="num right"><b>10</b></td>
+                  </tr>
+                  <tr>
+                    <td class="num">3</td>
+                    <td>Авангард</td>
+                    <td class="num">5</td>
+                    <td class="num hide-sm">3</td>
+                    <td class="num hide-sm">0</td>
+                    <td class="num hide-sm">2</td>
+                    <td class="num right"><b>9</b></td>
+                  </tr>
+                  <tr>
+                    <td class="num">4</td>
+                    <td>Торпедо</td>
+                    <td class="num">5</td>
+                    <td class="num hide-sm">2</td>
+                    <td class="num hide-sm">0</td>
+                    <td class="num hide-sm">3</td>
+                    <td class="num right"><b>6</b></td>
+                  </tr>
+                  <tr>
+                    <td class="num">5</td>
+                    <td>Спартак</td>
+                    <td class="num">5</td>
+                    <td class="num hide-sm">1</td>
+                    <td class="num hide-sm">1</td>
+                    <td class="num hide-sm">3</td>
+                    <td class="num right"><b>4</b></td>
+                  </tr>
+                  <tr>
+                    <td class="num">6</td>
+                    <td>Динамо</td>
+                    <td class="num">5</td>
+                    <td class="num hide-sm">1</td>
+                    <td class="num hide-sm">0</td>
+                    <td class="num hide-sm">4</td>
+                    <td class="num right"><b>3</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card" id="matches">
+            <div class="spread mb-8">
+              <h2 class="h3">Ближайшие матчи</h2>
+              <a class="small" href="#matches">Всё расписание →</a>
+            </div>
+            <div class="table-scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Матч</th>
+                    <th>Площадка</th>
+                    <th class="right">Статус</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>23 ноября, 14:00</td>
+                    <td><b>Авангард — Волга</b></td>
+                    <td>Спортзал УлГТУ</td>
+                    <td class="right"><span class="badge badge--success">Идёт</span></td>
+                  </tr>
+                  <tr>
+                    <td>23 ноября, 15:30</td>
+                    <td><b>Зенит — Торпедо</b></td>
+                    <td>Спортзал УлГТУ</td>
+                    <td class="right"><span class="badge">Скоро</span></td>
+                  </tr>
+                  <tr>
+                    <td>30 ноября, 13:00</td>
+                    <td><b>Спартак — Динамо</b></td>
+                    <td>«Юность»</td>
+                    <td class="right"><span class="badge">Скоро</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card" id="docs">
+            <h2 class="h3">Регламент</h2>
+            <p class="mt-12">Матчи проходят по правилам мини-футбола 5×5: два тайма по 20 минут, перерыв 5 минут. В заявку входит до 12 игроков, на поле — 5.</p>
+            <div class="facts mt-16">
+              <div class="facts__row"><span>Состав на матч</span><b>5 + 5 запасных</b></div>
+              <div class="facts__row"><span>Предупреждения</span><b>2 = удаление</b></div>
+              <div class="facts__row"><span>Перенос матча</span><b>за 48 часов</b></div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="stack">
+          <div class="card">
+            <h2 class="h3">Заявка</h2>
+            <div class="spread mt-12 small"><span class="muted">Заявлено команд</span><b>7 из 12</b></div>
+            <p class="small muted mt-8">Свободно ещё 5 мест. Приём заявок до 20 ноября.</p>
+            <a class="btn btn--primary btn--block mt-16" href="{% url 'league:apply' %}">Подать заявку</a>
+            <p class="small muted mt-8" style="text-align:center">Взнос 6 000 ₽ с команды</p>
+          </div>
+
+          <div class="card">
+            <h2 class="h3">Факты</h2>
+            <div class="facts mt-16">
+              <div class="facts__row"><span>Даты</span><b>1 — 20 декабря</b></div>
+              <div class="facts__row"><span>Формат</span><b>5×5</b></div>
+              <div class="facts__row"><span>Команд</span><b>12</b></div>
+              <div class="facts__row"><span>Город</span><b>Ульяновск</b></div>
+              <div class="facts__row"><span>Площадка</span><b>Спортзал УлГТУ</b></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="h3">Организатор</h2>
+            <p class="mt-12">Никита Маняков</p>
+            <p class="small muted mt-8">+7 900 000-00-00</p>
+            <p class="small muted">liga@foot73.ru</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
 
 </main>
 
- <footer class="site-footer">
+<footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-column footer-about">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
         <b>FOOT73</b>
         <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
       </div>
-      <div class="footer-column">
+      <div class="footer__col">
         <b>Разделы</b>
         <a href="{% url 'league:tournaments' %}">Турниры</a>
-        <a href="#">Таблицы</a>
-        <a href="#">Команды</a>
-        <a href="{% url 'league:home' %}#about">О лиге</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
       </div>
-      <div class="footer-column">
+      <div class="footer__col">
         <b>Контакты</b>
         <span>+7 900 000-00-00</span>
         <span>info@foot73.ru</span>
         <span>Ульяновск, ул. Северный Венец, 32</span>
       </div>
     </div>
-    <div class="footer-big" aria-hidden="true">FOOT73</div>
-    <div class="footer-bottom">
+    <div class="footer__bottom">
       <span>© 2026 FOOT73. Учебный проект.</span>
       <span>Политика конфиденциальности</span>
     </div>

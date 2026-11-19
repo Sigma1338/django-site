@@ -11,242 +11,229 @@
 <body>
 
 <div class="topbar">
-  <div class="container topbar-inner">
+  <div class="container topbar__inner">
     <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
-    <a href="{% url 'league:tournaments' %}">Приём заявок до 20 ноября &rarr;</a>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
   </div>
 </div>
 
-<header class="site-header">
-  <div class="container header-inner">
+<header class="header">
+  <div class="container header__inner">
     <a class="logo" href="{% url 'league:home' %}">
-      <img class="logo-image" src="{% static 'img/logo.svg' %}" alt="Логотип FOOT73" width="44" height="44">
-      <span class="logo-text"><b>FOOT73</b><small>Ульяновск</small></span>
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
     </a>
 
-    <nav class="main-menu" aria-label="Основное меню">
-      <a class="active" href="{% url 'league:tournaments' %}">Турниры</a>
-      <a href="#">Таблицы</a>
-      <a href="#">Команды</a>
+    <nav class="nav" aria-label="Основное меню">
+      <a class="is-active" href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
       <a href="{% url 'league:home' %}#about">О лиге</a>
     </nav>
 
-    <div class="header-buttons">
-      <a class="btn btn-orange" href="{% url 'league:tournaments' %}">Подать заявку</a>
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
     </div>
   </div>
 </header>
 
 <main>
 
-<section class="section section-small-bottom page-intro">
-  <div class="container">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="{% url 'league:home' %}">Главная</a><span aria-hidden="true">/</span>Турниры
-    </nav>
-    <h1>Турниры</h1>
-    <p class="lead">12 турниров сезона 2026/2027: кубки, лиги и турниры выходного дня.</p>
-  </div>
-</section>
+  <section class="section section--tight-bottom">
+    <div class="container">
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span>Турниры</div>
+      <h1 class="h1">Турниры</h1>
+      <p class="lead mt-12">12 турниров сезона 2026/2027: кубки, лиги и турниры выходного дня.</p>
+    </div>
+  </section>
 
-<section class="section section-small-top">
-  <div class="container">
+  <section class="section section--tight-top">
+    <div class="container">
 
-    <div class="filter-card">
-      <div class="filter-inner">
-        <div class="filter-group">
-          <span class="small gray">Фильтр:</span>
-          <span class="badge badge-green">Все турниры</span>
-          <span class="badge">Идут заявки</span>
-          <span class="badge">Скоро</span>
-          <span class="badge">Завершены</span>
-        </div>
-        <div class="filter-group">
-          <label class="small gray" for="format">Формат</label>
-          <select class="select-small" id="format">
-            <option>Любой</option>
-            <option>5×5</option>
-            <option>8×8</option>
-          </select>
+      <div class="card mb-16" style="padding:16px 20px">
+        <div class="spread" style="flex-wrap:wrap;gap:12px">
+          <div class="row" style="flex-wrap:wrap">
+            <span class="small muted">Фильтр:</span>
+            <span class="badge badge--success">Все турниры</span>
+            <span class="badge">Идут заявки</span>
+            <span class="badge">Скоро</span>
+            <span class="badge">Завершены</span>
+          </div>
+          <div class="row">
+            <label class="small muted" for="format">Формат</label>
+            <select class="select" id="format" style="min-height:38px;width:150px">
+              <option>Любой</option>
+              <option>5×5</option>
+              <option>8×8</option>
+            </select>
+          </div>
         </div>
       </div>
+
+      <div class="grid cols-3">
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--success">Идут заявки</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Кубок Ульяновска по мини-футболу</h3>
+            <div class="tcard__meta">
+              <span>1 — 20 декабря 2026</span>
+              <span>Спортзал УлГТУ</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>7 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">6 000 ₽</span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'cup-ulyanovsk-2026' %}">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--warning">Скоро</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Зимняя лига 2027</h3>
+            <div class="tcard__meta">
+              <span>15 января — 28 февраля 2027</span>
+              <span>ФОК «Олимп»</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>0 из 16</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">7 500 ₽</span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'winter-cup-foot73' %}">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge">Идёт</span>
+            <span class="small muted">8×8</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Турнир выходного дня</h3>
+            <div class="tcard__meta">
+              <span>23 ноября 2026</span>
+              <span>«Юность»</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>6 из 8</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">2 000 ₽</span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'league-weekend' %}">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--success">Идут заявки</span>
+            <span class="small muted">8×8</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Осенний кубок города</h3>
+            <div class="tcard__meta">
+              <span>5 — 19 октября 2026</span>
+              <span>«Юность»</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>9 из 10</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">4 000 ₽</span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'student-league' %}">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge">Завершён</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Летняя лига 2026</h3>
+            <div class="tcard__meta">
+              <span>1 июня — 30 августа 2026</span>
+              <span>Спортзал УлГТУ</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>12 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">5 000 ₽</span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'night-league' %}">Итоги</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--warning">Скоро</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Кубок первокурсника</h3>
+            <div class="tcard__meta">
+              <span>12 — 26 сентября 2026</span>
+              <span>УлГТУ</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>2 из 8</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">1 500 ₽</span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'veterans-cup' %}">Подробнее</a>
+          </div>
+        </article>
+
+      </div>
+
     </div>
-
-    <div class="tournament-list">
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-green">Идут заявки</span>
-          <span class="small gray">5×5</span>
-        </div>
-
-        <div class="tournament-body">
-          <h2 class="tournament-title">Кубок Ульяновска 2026</h2>
-          <div class="tournament-info">
-            <span>12 ноября — 20 декабря</span>
-            <span>Манеж «Спартак»</span>
-          </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>14 из 16</b>
-          </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">4 500 ₽</span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'cup-ulyanovsk-2026' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-orange">Скоро</span>
-          <span class="small gray">8×8</span>
-        </div>
-
-        <div class="tournament-body">
-          <h2 class="tournament-title">Лига выходного дня</h2>
-          <div class="tournament-info">
-            <span>23 ноября — 15 февраля</span>
-            <span>Площадка «Северный Венец»</span>
-          </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>8 из 12</b>
-          </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">3 000 ₽</span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'league-weekend' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-green">Идут заявки</span>
-          <span class="small gray">5×5</span>
-        </div>
-
-        <div class="tournament-body">
-          <h2 class="tournament-title">Зимний кубок FOOT73</h2>
-          <div class="tournament-info">
-            <span>1 декабря — 28 февраля</span>
-            <span>ФОК «Олимпиец»</span>
-          </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>11 из 16</b>
-          </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">5 000 ₽</span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'winter-cup-foot73' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge">Завершён</span>
-          <span class="small gray">5×5</span>
-        </div>
-
-        <div class="tournament-body">
-          <h2 class="tournament-title">Студенческая лига</h2>
-          <div class="tournament-info">
-            <span>15 сентября — 30 октября</span>
-            <span>УлГУ, спортзал</span>
-          </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>10 из 10</b>
-          </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">2 000 ₽</span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'student-league' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-orange">Скоро</span>
-          <span class="small gray">5×5</span>
-        </div>
-
-        <div class="tournament-body">
-          <h2 class="tournament-title">Ночная лига</h2>
-          <div class="tournament-info">
-            <span>5 декабря — 30 марта</span>
-            <span>Манеж «Спартак»</span>
-          </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>6 из 8</b>
-          </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">4 000 ₽</span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'night-league' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge">Завершён</span>
-          <span class="small gray">8×8</span>
-        </div>
-
-        <div class="tournament-body">
-          <h2 class="tournament-title">Кубок ветеранов</h2>
-          <div class="tournament-info">
-            <span>1 августа — 20 сентября</span>
-            <span>Стадион «Труд»</span>
-          </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>8 из 8</b>
-          </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">2 500 ₽</span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'veterans-cup' %}">Подробнее</a>
-        </div>
-      </article>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-column footer-about">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
         <b>FOOT73</b>
         <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
       </div>
-      <div class="footer-column">
+      <div class="footer__col">
         <b>Разделы</b>
         <a href="{% url 'league:tournaments' %}">Турниры</a>
-        <a href="#">Таблицы</a>
-        <a href="#">Команды</a>
-        <a href="{% url 'league:home' %}#about">О лиге</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
       </div>
-      <div class="footer-column">
+      <div class="footer__col">
         <b>Контакты</b>
         <span>+7 900 000-00-00</span>
         <span>info@foot73.ru</span>
         <span>Ульяновск, ул. Северный Венец, 32</span>
       </div>
     </div>
-    <div class="footer-big" aria-hidden="true">FOOT73</div>
-    <div class="footer-bottom">
-      <span>© 2026 FOOT73. </span>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
       <span>Политика конфиденциальности</span>
     </div>
   </div>

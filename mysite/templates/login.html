@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="auth">
+    <div class="auth__card">
+      <a class="logo" href="{% url 'league:home' %}">
+        <span class="logo__mark">F73</span>
+        <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+      </a>
+
+      <h1 class="h2">Вход в кабинет</h1>
+      <p class="small muted mt-8">Капитаны, организаторы и судьи входят под одной учётной записью.</p>
+
+      <form class="form mt-24" method="post">
+        {% csrf_token %}
+        {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+
+        {% if error %}
+          <div class="note note--error">{{ error }}</div>
+        {% endif %}
+
+        <div class="field">
+          <label for="login-email">E-mail</label>
+          <input class="input" id="login-email" name="email" type="email" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="login-pass">Пароль</label>
+          <input class="input" id="login-pass" name="password" type="password" autocomplete="current-password" required>
+        </div>
+
+        <div class="spread">
+          <label class="check">
+            <input type="checkbox" checked>
+            <span>Запомнить меня</span>
+          </label>
+          <a class="small" href="{% url 'league:login' %}">Забыли пароль?</a>
+        </div>
+
+        <button class="btn btn--primary btn--block btn--lg" type="submit">Войти</button>
+
+        <div class="note note--info">
+          Нет аккаунта? Его создаёт капитан при подаче заявки, а организатор — в админ-панели.
+        </div>
+
+        <p class="small muted" style="text-align:center">
+          Капитан: <b>captain@mail.ru</b> / <b>password</b>
+        </p>
+        <p class="small muted" style="text-align:center">
+          Организатор: <b>admin@foot73.ru</b> / <b>admin12345</b>
+        </p>
+
+        <p class="small muted" style="text-align:center">
+          <a href="{% url 'league:apply' %}">Подать заявку без входа</a>
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

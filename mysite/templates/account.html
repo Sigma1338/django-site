@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный кабинет — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost is-active" href="{% url 'league:account' %}">Кабинет</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="spread" style="align-items:flex-start;flex-wrap:wrap">
+        <div>
+          <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span>Личный кабинет</div>
+          <h1 class="h1">{% if user.is_staff %}Кабинет организатора{% else %}Кабинет капитана{% endif %}</h1>
+          <p class="lead mt-12">
+            {% if user.is_staff %}
+              {{ user.get_full_name|default:user.email }} · организатор лиги
+            {% else %}
+              {{ user.get_full_name|default:user.email }} · команда «Волга»
+            {% endif %}
+          </p>
+        </div>
+        <form method="post" action="{% url 'league:logout' %}">
+          {% csrf_token %}
+          <button class="btn btn--outline" type="submit">Выйти</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:32px">
+    <div class="container">
+
+      <div class="stats mb-16">
+        <div class="stat"><b>2</b><span>активные заявки</span></div>
+        <div class="stat"><b>1</b><span>команда</span></div>
+        <div class="stat"><b>8</b><span>игроков в составе</span></div>
+        <div class="stat"><b>12</b><span>очков в таблице</span></div>
+      </div>
+
+      <div class="grid split">
+
+        <div class="stack">
+
+          <div class="card">
+            <div class="spread mb-8">
+              <h2 class="h3">Мои заявки</h2>
+              <a class="btn btn--primary btn--sm" href="{% url 'league:apply' %}">Новая заявка</a>
+            </div>
+            <div class="table-scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Турнир</th>
+                    <th>Дата подачи</th>
+                    <th class="right">Статус</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Кубок Ульяновска</b><br><span class="small muted">5×5 · 1 — 20 декабря</span></td>
+                    <td>14 ноября 2026</td>
+                    <td class="right"><span class="badge badge--success">Одобрена</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>Зимняя лига 2027</b><br><span class="small muted">5×5 · январь — февраль</span></td>
+                    <td>12 ноября 2026</td>
+                    <td class="right"><span class="badge badge--warning">На проверке</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>Осенний кубок города</b><br><span class="small muted">8×8 · 5 — 19 октября</span></td>
+                    <td>20 сентября 2026</td>
+                    <td class="right"><span class="badge">Завершена</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="spread mb-8">
+              <h2 class="h3">Состав команды «Волга»</h2>
+              <span class="small muted">8 из 12 игроков</span>
+            </div>
+            <div class="table-scroll">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="num">#</th>
+                    <th>Игрок</th>
+                    <th>Амплуа</th>
+                    <th class="right">Годы</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="num">1</td>
+                    <td>Маняков Никита</td>
+                    <td>Вратарь</td>
+                    <td class="right">1998</td>
+                  </tr>
+                  <tr>
+                    <td class="num">7</td>
+                    <td>Абдуллин Ринат</td>
+                    <td>Защитник</td>
+                    <td class="right">2001</td>
+                  </tr>
+                  <tr>
+                    <td class="num">9</td>
+                    <td>Кузнецов Павел</td>
+                    <td>Нападающий</td>
+                    <td class="right">1999</td>
+                  </tr>
+                  <tr>
+                    <td class="num">10</td>
+                    <td>Сидоров Артём</td>
+                    <td>Нападающий</td>
+                    <td class="right">2000</td>
+                  </tr>
+                  <tr>
+                    <td class="num">11</td>
+                    <td>Иванов Дмитрий</td>
+                    <td>Защитник</td>
+                    <td class="right">1997</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn--outline btn--sm mt-16" href="{% url 'league:account' %}">Добавить игрока</a>
+          </div>
+
+        </div>
+
+        <aside class="stack">
+          <div class="card">
+            <h2 class="h3">Ближайший матч</h2>
+            <p class="mt-12"><b>23 ноября, 14:00</b></p>
+            <p class="small muted">Кубок Ульяновска · 2-й тур</p>
+            <div class="match__row mt-12">
+              <span class="match__team">Авангард</span>
+              <span class="match__score">0</span>
+            </div>
+            <div class="match__row">
+              <span class="match__team">Волга</span>
+              <span class="match__score">2</span>
+            </div>
+            <p class="small muted mt-8">Спортзал УлГТУ</p>
+          </div>
+
+          <div class="card">
+            <h2 class="h3">Профиль</h2>
+            <form class="form mt-16">
+              <div class="field">
+                <label for="acc-name">ФИО</label>
+                <input class="input" id="acc-name" type="text" value="{{ user.get_full_name }}">
+              </div>
+              <div class="field">
+                <label for="acc-phone">Телефон</label>
+                <input class="input" id="acc-phone" type="tel" value="+7 900 000-00-00">
+              </div>
+              <div class="field">
+                <label for="acc-email">E-mail</label>
+                <input class="input" id="acc-email" type="email" value="{{ user.email }}">
+              </div>
+              <button class="btn btn--primary" type="submit">Сохранить</button>
+            </form>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
+        <b>FOOT73</b>
+        <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
+      </div>
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="{% url 'league:tournaments' %}">Турниры</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <span>+7 900 000-00-00</span>
+        <span>info@foot73.ru</span>
+        <span>Ульяновск, ул. Северный Венец, 32</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

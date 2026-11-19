@@ -10,261 +10,251 @@
 </head>
 <body>
 
- <div class="topbar">
-  <div class="container topbar-inner">
+<div class="topbar">
+  <div class="container topbar__inner">
     <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
-    <a href="{% url 'league:tournaments' %}">Приём заявок до 20 ноября &rarr;</a>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
   </div>
 </div>
 
- <header class="site-header">
-  <div class="container header-inner">
+<header class="header">
+  <div class="container header__inner">
     <a class="logo" href="{% url 'league:home' %}">
-      <img class="logo-image" src="{% static 'img/logo.svg' %}" alt="Логотип FOOT73" width="44" height="44">
-      <span class="logo-text"><b>FOOT73</b><small>Ульяновск</small></span>
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
     </a>
 
-    <nav class="main-menu" aria-label="Основное меню">
+    <nav class="nav" aria-label="Основное меню">
       <a href="{% url 'league:tournaments' %}">Турниры</a>
-      <a href="#">Таблицы</a>
-      <a href="#">Команды</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
       <a href="{% url 'league:home' %}#about">О лиге</a>
     </nav>
 
-    <div class="header-buttons">
-      <a class="btn btn-orange" href="{% url 'league:tournaments' %}">Подать заявку</a>
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
     </div>
   </div>
 </header>
 
 <main>
 
- <section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <span class="badge badge-orange">Заявки на Кубок открыты до 20 ноября</span>
-      <h1>Твой турнир начинается <span class="accent">здесь</span></h1>
-      <p class="lead">Лига футбола Ульяновска. Собери команду, подай заявку онлайн и выходи на площадку — без бумажной волокиты.</p>
-
-      <div class="hero-buttons">
-        <a class="btn btn-orange btn-big" href="{% url 'league:tournaments' %}">Подать заявку</a>
-        <a class="btn btn-border btn-big" href="{% url 'league:tournaments' %}">Смотреть турниры</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat"><b>12</b><span>турниров в сезоне</span></div>
-        <div class="stat"><b>48</b><span>команд</span></div>
-        <div class="stat"><b>1057</b><span>игроков в базе</span></div>
-      </div>
-    </div>
-
-    <aside class="match-card" aria-label="Матч, который идёт сейчас">
-      <div class="match-top">
-        <span class="small gray">Высшая лига · 2-й тур</span>
-        <span class="badge badge-green">LIVE</span>
-      </div>
-
-      <div class="match-teams">
-        <div class="match-row">
-          <span class="match-team"><span class="team-mark" aria-hidden="true">ВЛ</span> Волга</span>
-          <span class="match-score">2</span>
-        </div>
-        <div class="match-row">
-          <span class="match-team"><span class="team-mark" aria-hidden="true">СМ</span> Симбирск</span>
-          <span class="match-score">1</span>
-        </div>
-      </div>
-
-      <p class="match-time small gray">34-я минута  второй тайм</p>
-
-      <div class="mini-table">
-        <p class="mini-table-title small gray">Высшая лига</p>
-        <div class="mini-table-row"><span>1. Волга</span><b>44</b></div>
-        <div class="mini-table-row"><span>2. Симбирск</span><b>42</b></div>
-        <div class="mini-table-row"><span>3. Торпедо</span><b>36</b></div>
-        <div class="mini-table-row"><span>4. Динамо-УлГУ</span><b>32</b></div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
+  <section class="hero">
+    <div class="container hero__inner">
       <div>
-        <span class="eyebrow">Календарь</span>
-        <h2>Ближайшие турниры</h2>
+        <span class="badge badge--lime">Заявки на Кубок открыты до 20 ноября</span>
+        <h1 class="h1 mt-16">Твой турнир начинается <span class="accent">здесь</span></h1>
+        <p class="lead mt-16">Любительская лига мини-футбола Ульяновска. Собери команду, подай заявку онлайн и выходи на площадку — без бумажной волокиты.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent btn--lg" href="{% url 'league:apply' %}">Подать заявку</a>
+          <a class="btn btn--outline btn--lg" href="{% url 'league:tournaments' %}">Смотреть турниры</a>
+        </div>
+        <div class="hero__stats">
+          <div><b>12</b><span>турниров в сезоне</span></div>
+          <div><b>48</b><span>команд</span></div>
+          <div><b>1057</b><span>игроков в базе</span></div>
+        </div>
       </div>
-      <a href="{% url 'league:tournaments' %}">Все турниры →</a>
+
+      <div class="match">
+        <div class="spread">
+          <span class="small muted">Матч · 2-й тур</span>
+          <span class="badge badge--success">Идёт</span>
+        </div>
+        <div class="mt-12">
+          <div class="match__row">
+            <span class="match__team">Авангард</span>
+            <span class="match__score">0</span>
+          </div>
+          <div class="match__row">
+            <span class="match__team">Волга</span>
+            <span class="match__score">2</span>
+          </div>
+        </div>
+        <p class="small muted mt-8">64′ · Спортзал УлГТУ</p>
+
+        <div class="mini-table mt-16">
+          <div class="caption small muted mb-8">Высшая лига</div>
+          <div class="mini-table__row"><span>1. Волга</span><b>12</b></div>
+          <div class="mini-table__row"><span>2. Зенит</span><b>10</b></div>
+          <div class="mini-table__row"><span>3. Авангард</span><b>9</b></div>
+          <div class="mini-table__row"><span>4. Торпедо</span><b>6</b></div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="tournament-list">
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-green">Идут заявки</span>
-          <span class="small gray">5×5</span>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="h2 mt-8">Ближайшие турниры</h2>
         </div>
+        <a href="{% url 'league:tournaments' %}">Все турниры →</a>
+      </div>
 
-        <div class="tournament-body">
-          <h3 class="tournament-title">Кубок Ульяновска 2026</h3>
-          <div class="tournament-info">
-            <span>12 ноября — 20 декабря</span>
-            <span>Манеж «Спартак»</span>
+      <div class="grid cols-3">
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--success">Идут заявки</span>
+            <span class="small muted">5×5</span>
           </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>14 из 16</b>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Кубок Ульяновска по мини-футболу</h3>
+            <div class="tcard__meta">
+              <span>1 — 20 декабря 2026</span>
+              <span>Ульяновск · Спортзал УлГТУ</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>7 из 12</b></div>
+            </div>
           </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">4 500 ₽ <small>/ взнос</small></span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'cup-ulyanovsk-2026' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-orange">Скоро</span>
-          <span class="small gray">8×8</span>
-        </div>
-
-        <div class="tournament-body">
-          <h3 class="tournament-title">Лига выходного дня</h3>
-          <div class="tournament-info">
-            <span>23 ноября — 15 февраля</span>
-            <span>Площадка «Северный Венец»</span>
+          <div class="tcard__foot">
+            <span class="price">6 000 ₽ <small>/ взнос</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'cup-ulyanovsk-2026' %}">Подробнее</a>
           </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>8 из 12</b>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--warning">Скоро</span>
+            <span class="small muted">5×5</span>
           </div>
-        </div>
-
-        <div class="tournament-bottom">
-          <span class="price">3 000 ₽ <small>/ взнос</small></span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'league-weekend' %}">Подробнее</a>
-        </div>
-      </article>
-
-      <article class="tournament-card">
-        <div class="tournament-top">
-          <span class="badge badge-green">Идут заявки</span>
-          <span class="small gray">5×5</span>
-        </div>
-
-        <div class="tournament-body">
-          <h3 class="tournament-title">Зимний кубок FOOT73</h3>
-          <div class="tournament-info">
-            <span>1 декабря — 28 февраля</span>
-            <span>ФОК «Олимпиец»</span>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Зимняя лига 2027</h3>
+            <div class="tcard__meta">
+              <span>15 января — 28 февраля 2027</span>
+              <span>Ульяновск · ФОК «Олимп»</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>0 из 16</b></div>
+            </div>
           </div>
-          <div class="teams-count">
-            <span>Заявлено команд</span>
-            <b>11 из 16</b>
+          <div class="tcard__foot">
+            <span class="price">7 500 ₽ <small>/ взнос</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'winter-cup-foot73' %}">Подробнее</a>
           </div>
-        </div>
+        </article>
 
-        <div class="tournament-bottom">
-          <span class="price">5 000 ₽ <small>/ взнос</small></span>
-          <a class="btn btn-border btn-small" href="{% url 'league:tournament_detail' 'winter-cup-foot73' %}">Подробнее</a>
-        </div>
-      </article>
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge">Идёт</span>
+            <span class="small muted">8×8</span>
+          </div>
+          <div class="tcard__body">
+            <h3 class="tcard__title">Турнир выходного дня</h3>
+            <div class="tcard__meta">
+              <span>23 ноября 2026</span>
+              <span>Ульяновск · «Юность»</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Заявлено команд</span><b>6 из 8</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">2 000 ₽ <small>/ взнос</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'league-weekend' %}">Подробнее</a>
+          </div>
+        </article>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-white">
-  <div class="container">
-    <div class="section-head">
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="h2 mt-8">От заявки до свистка</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3>Соберите команду</h3>
+          <p>Минимум 5 игроков, капитан и название. Добавьте состав прямо в форме заявки.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3>Подайте заявку онлайн</h3>
+          <p>Выберите турнир и дивизион. Организатор проверит заявку за один рабочий день.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <h3>Выходите на площадку</h3>
+          <p>Расписание и таблица обновляются автоматически после каждого матча.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="grid cols-2">
+        <div class="card">
+          <h2 class="h2">О лиге</h2>
+          <p class="lead mt-12">FOOT73 — любительские турниры по мини-футболу в Ульяновске. Играют студенты, офисные команды и дворовые составы: без взносов «на судью» и бумажных протоколов.</p>
+          <p class="mt-12 muted">Все заявки, составы и результаты хранятся в одном месте. Капитан видит статус заявки, игроки — расписание, организатор — таблицы и долги по взносам.</p>
+          <a class="btn btn--primary mt-24" href="{% url 'league:apply' %}">Стать участником</a>
+        </div>
+        <div class="card">
+          <h2 class="h3">Частые вопросы</h2>
+          <div class="facts mt-16">
+            <div class="facts__row"><span>Сколько игроков нужно?</span><b>От 5 до 12</b></div>
+            <div class="facts__row"><span>Можно ли заявить две команды?</span><b>Да</b></div>
+            <div class="facts__row"><span>Сколько стоит участие?</span><b>От 2 000 ₽</b></div>
+            <div class="facts__row"><span>Где проходят матчи?</span><b>Спортзалы города</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
       <div>
-        <span class="eyebrow">Как это работает</span>
-        <h2>От заявки до свистка</h2>
+        <h2 class="h2 mt-8">Готовы выйти на площадку?</h2>
+        <p>Соберите команду и подайте заявку онлайн — организатор проверит её за один рабочий день.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--accent btn--lg" href="{% url 'league:apply' %}">Подать заявку</a>
+        <a class="btn btn--light btn--lg" href="{% url 'league:tournaments' %}">Выбрать турнир</a>
       </div>
     </div>
-
-    <div class="steps">
-      <article class="step">
-        <div class="step-number" aria-hidden="true">01</div>
-        <h3>Соберите команду</h3>
-        <p>Минимум 5 игроков, капитан и название. Добавьте состав прямо в форме заявки.</p>
-      </article>
-      <article class="step">
-        <div class="step-number" aria-hidden="true">02</div>
-        <h3>Подайте заявку онлайн</h3>
-        <p>Выберите турнир и дивизион. Организатор проверит заявку за один рабочий день.</p>
-      </article>
-      <article class="step">
-        <div class="step-number" aria-hidden="true">03</div>
-        <h3>Выходите на площадку</h3>
-        <p>Расписание и таблица обновляются автоматически после каждого матча.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="container">
-    <div class="two-columns">
-      <article class="card about-card">
-        <h2>О лиге</h2>
-        <p class="lead">FOOT73 — любительские турниры по мини-футболу в Ульяновске. Играют студенты, офисные команды и дворовые составы: без взносов «на судью» и бумажных протоколов.</p>
-        <p class="gray">Все заявки, составы и результаты хранятся в одном месте. Капитан видит статус заявки, игроки — расписание, организатор — таблицы и долги по взносам.</p>
-        <a class="btn btn-black" href="{% url 'league:tournaments' %}">Стать участником</a>
-      </article>
-
-      <article class="card">
-        <h2 class="small-heading">Частые вопросы</h2>
-        <div class="facts">
-          <div class="fact"><span>Сколько игроков нужно?</span><b>Минимум 5</b></div>
-          <div class="fact"><span>Размер взноса</span><b>от 2 000 ₽</b></div>
-          <div class="fact"><span>Заявка онлайн</span><b>За 1 день</b></div>
-          <div class="fact"><span>Возраст участников</span><b>от 16 лет</b></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container cta-inner">
-    <div>
-      <span class="eyebrow">Сезон 2026/2027</span>
-      <h2>Готовы выйти на площадку?</h2>
-      <p>Соберите команду и подайте заявку онлайн — организатор проверит её за один рабочий день.</p>
-    </div>
-    <div class="cta-buttons">
-      <a class="btn btn-orange btn-big" href="{% url 'league:tournaments' %}">Подать заявку</a>
-      <a class="btn btn-white-border btn-big" href="{% url 'league:tournaments' %}">Выбрать турнир</a>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-column footer-about">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
         <b>FOOT73</b>
         <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
       </div>
-      <div class="footer-column">
+      <div class="footer__col">
         <b>Разделы</b>
         <a href="{% url 'league:tournaments' %}">Турниры</a>
-        <a href="#">Таблицы</a>
-        <a href="#">Команды</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
       </div>
-      <div class="footer-column">
+      <div class="footer__col">
         <b>Контакты</b>
         <span>+7 900 000-00-00</span>
         <span>info@foot73.ru</span>
         <span>Ульяновск, ул. Северный Венец, 32</span>
       </div>
     </div>
-    <div class="footer-big" aria-hidden="true">FOOT73</div>
-    <div class="footer-bottom">
-      <span>© 2026 FOOT73.</span>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
       <span>Политика конфиденциальности</span>
     </div>
   </div>

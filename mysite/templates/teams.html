@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Команды — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a class="is-active" href="{% url 'league:teams' %}">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section section--tight-bottom">
+    <div class="container">
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span>Команды</div>
+      <h1 class="h1">Команды</h1>
+      <p class="lead mt-12">48 любительских команд Ульяновска: студенты, офисные составы и дворовые коллективы.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight-top">
+    <div class="container">
+      <div class="grid cols-3">
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--success">Высшая лига</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h2 class="tcard__title">Волга</h2>
+            <div class="tcard__meta">
+              <span>Капитан: Никита Маняков</span>
+              <span>Ульяновск · с 2021 года</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Игроков в составе</span><b>8 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">44 <small>очка</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tables' %}">В таблице</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--success">Высшая лига</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h2 class="tcard__title">Симбирск</h2>
+            <div class="tcard__meta">
+              <span>Капитан: Артём Белов</span>
+              <span>Ульяновск · с 2019 года</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Игроков в составе</span><b>11 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">42 <small>очка</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tables' %}">В таблице</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--success">Высшая лига</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h2 class="tcard__title">Торпедо</h2>
+            <div class="tcard__meta">
+              <span>Капитан: Павел Кузнецов</span>
+              <span>Ульяновск · с 2020 года</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Игроков в составе</span><b>10 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">36 <small>очков</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tables' %}">В таблице</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge">Первая лига</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h2 class="tcard__title">Локомотив</h2>
+            <div class="tcard__meta">
+              <span>Капитан: Дмитрий Иванов</span>
+              <span>Ульяновск · с 2022 года</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Игроков в составе</span><b>9 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">38 <small>очков</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tables' %}">В таблице</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge">Первая лига</span>
+            <span class="small muted">5×5</span>
+          </div>
+          <div class="tcard__body">
+            <h2 class="tcard__title">Спартак</h2>
+            <div class="tcard__meta">
+              <span>Капитан: Ринат Абдуллин</span>
+              <span>Ульяновск · с 2023 года</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Игроков в составе</span><b>7 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">34 <small>очка</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:tables' %}">В таблице</a>
+          </div>
+        </article>
+
+        <article class="card tcard">
+          <div class="tcard__top">
+            <span class="badge badge--warning">Заявка</span>
+            <span class="small muted">8×8</span>
+          </div>
+          <div class="tcard__body">
+            <h2 class="tcard__title">Авангард</h2>
+            <div class="tcard__meta">
+              <span>Капитан: Сергей Орлов</span>
+              <span>Ульяновск · новая команда</span>
+            </div>
+            <div class="mt-16">
+              <div class="spread small"><span class="muted">Игроков в составе</span><b>6 из 12</b></div>
+            </div>
+          </div>
+          <div class="tcard__foot">
+            <span class="price">— <small>очков</small></span>
+            <a class="btn btn--outline btn--sm" href="{% url 'league:apply' %}">Подать заявку</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
+        <b>FOOT73</b>
+        <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
+      </div>
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="{% url 'league:tournaments' %}">Турниры</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <span>+7 900 000-00-00</span>
+        <span>info@foot73.ru</span>
+        <span>Ульяновск, ул. Северный Венец, 32</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

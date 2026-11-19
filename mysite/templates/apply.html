@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заявка на турнир — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span><a href="{% url 'league:tournaments' %}">Турниры</a><span>/</span>Заявка</div>
+      <h1 class="h1">Заявка на турнир</h1>
+      <p class="lead mt-12">Заполните данные команды и капитана. Поля со звёздочкой обязательны.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:32px">
+    <div class="container">
+      <div class="grid split">
+
+        <form class="card form">
+
+          <div class="field">
+            <label for="tournament">Турнир <span class="req">*</span></label>
+            <select class="select" id="tournament" required>
+              <option value="" selected disabled>Выберите турнир</option>
+              <option>Кубок Ульяновска по мини-футболу · 5×5</option>
+              <option>Зимняя лига 2027 · 5×5</option>
+              <option>Турнир выходного дня · 8×8</option>
+            </select>
+            <span class="hint">Приём заявок до 20 ноября 2026</span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="team">Название команды <span class="req">*</span></label>
+              <input class="input" id="team" type="text" placeholder="Например: Волга" required>
+              <span class="hint">От 3 до 40 символов</span>
+            </div>
+            <div class="field">
+              <label for="city">Город <span class="req">*</span></label>
+              <input class="input" id="city" type="text" placeholder="Ульяновск" required>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="captain">Капитан: ФИО <span class="req">*</span></label>
+              <input class="input" id="captain" type="text" placeholder="Фамилия Имя Отчество" required>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон <span class="req">*</span></label>
+              <input class="input" id="phone" type="tel" placeholder="+7 900 000-00-00" required>
+              <span class="hint">В формате +7 900 000-00-00</span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input class="input" id="email" type="email" placeholder="captain@mail.ru" required>
+              <span class="hint">На него придёт подтверждение заявки</span>
+            </div>
+            <div class="field">
+              <label for="players">Игроков в составе <span class="req">*</span></label>
+              <input class="input" id="players" type="number" min="5" max="12" required>
+              <span class="hint">Минимум 5, максимум 12</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="comment">Комментарий организатору</label>
+            <textarea class="textarea" id="comment" placeholder="Например: нужен перенос матча 1-го тура"></textarea>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" required>
+            <span>Согласен на обработку персональных данных и с регламентом турнира</span>
+          </label>
+
+          <div class="row" style="flex-wrap:wrap">
+            <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>
+            <a class="btn btn--outline btn--lg" href="{% url 'league:tournaments' %}">Отмена</a>
+          </div>
+
+        </form>
+
+        <aside class="stack">
+          <div class="card">
+            <h2 class="h3">Что дальше</h2>
+            <div class="facts mt-16">
+              <div class="facts__row"><span>1. Проверка</span><b>1 рабочий день</b></div>
+              <div class="facts__row"><span>2. Взнос</span><b>6 000 ₽</b></div>
+              <div class="facts__row"><span>3. Состав</span><b>до 12 игроков</b></div>
+            </div>
+            <p class="small muted mt-16">Статус заявки придёт на e-mail и появится в личном кабинете капитана.</p>
+          </div>
+
+          <div class="card">
+            <h2 class="h3">Нужна помощь?</h2>
+            <p class="mt-12">Позвоните организатору — подскажем по составу и документам.</p>
+            <p class="mt-12"><b>+7 900 000-00-00</b></p>
+            <p class="small muted">Ежедневно с 10:00 до 20:00</p>
+          </div>
+
+          <div class="note note--info">
+            Заявку подаёт капитан команды. После одобрения он сможет добавить игроков в состав.
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
+        <b>FOOT73</b>
+        <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
+      </div>
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="{% url 'league:tournaments' %}">Турниры</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <span>+7 900 000-00-00</span>
+        <span>info@foot73.ru</span>
+        <span>Ульяновск, ул. Северный Венец, 32</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
