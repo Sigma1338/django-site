@@ -1,0 +1,1888 @@
+{
+  "cssvalidation" : {
+     "uri"       : "TextArea",
+     "checkedby" : "http://www.w3.org/2005/07/css-validator",
+     "csslevel"  : "css3",
+     "date"      : "2026-11-19T12:09:01Z",
+     "timestamp" : "1795090141139",
+     "validity"  : true,
+     "result"    : {
+		"errorcount"   : 0,
+		"warningcount" : 234
+                   }
+       ,
+     "warnings"   : [
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 35,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 65,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 118,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 119,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 120,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 146,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 148,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 163,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 196,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 205,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 208,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 211,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 245,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 248,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 254,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 255,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 296,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 339,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 343,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 343,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 375,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 377,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 382,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 415,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 436,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 444,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 453,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 457,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 461,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 462,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 478,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 481,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 482,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 517,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 524,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 544,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 544,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 544,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 547,
+         "message" :  "Redefinition of \u201Cmin-height\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 548,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 549,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 555,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 555,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 555,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 565,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 594,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 605,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 625,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 640,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 655,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 656,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 669,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 674,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 675,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 685,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 695,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 700,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 712,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 717,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 736,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 741,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 754,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 773,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 776,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 784,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 794,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 795,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 796,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 797,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 799,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 800,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 801,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 807,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 807,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 807,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 813,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 813,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 813,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 813,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 813,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 813,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 814,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 815,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 816,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 820,
+         "message" :  "Redefinition of \u201Cmin-height\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 821,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 821,
+         "message" :  "Redefinition of \u201Cmin-height\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 821,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 821,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 821,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 821,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 823,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 823,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 823,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 823,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 823,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 824,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 825,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 826,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 827,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 827,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 827,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 827,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 828,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 829,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 829,
+         "message" :  "Redefinition of \u201Cmargin-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 830,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 830,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 830,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 830,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 831,
+         "message" :  "Redefinition of \u201Calign-items\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 831,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 833,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 834,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 835,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 836,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 836,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 840,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 840,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 840,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 840,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 841,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 841,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 841,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 841,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 843,
+         "message" :  "Redefinition of \u201Cjustify-content\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 846,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 847,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 848,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 850,
+         "message" :  "Redefinition of \u201Cwidth\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 850,
+         "message" :  "Redefinition of \u201Cheight\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 850,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 851,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 855,
+         "message" :  "Redefinition of \u201Cmargin-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 856,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 856,
+         "message" :  "Redefinition of \u201Cmargin-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 857,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 860,
+         "message" :  "Redefinition of \u201Calign-items\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 860,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 860,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 861,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 861,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 861,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 861,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 862,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 862,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 862,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 862,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 863,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 863,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 863,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 863,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 864,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 864,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 864,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 864,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 867,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 868,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 870,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 870,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 870,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 870,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 871,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 873,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 874,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 874,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 874,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 874,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 875,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 875,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 875,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 875,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 876,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 876,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 876,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 876,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 877,
+         "message" :  "Redefinition of \u201Cgrid-template-columns\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 880,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 881,
+         "message" :  "Redefinition of \u201Cheight\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 934,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 949,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 959,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 976,
+         "message" :  "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-background-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 982,
+         "message" :  "Redefinition of \u201Cdisplay\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 983,
+         "message" :  "Redefinition of \u201Cflex-wrap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 985,
+         "message" :  "Redefinition of \u201Cdisplay\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 992,
+         "message" :  "Redefinition of \u201Calign-items\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 993,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 995,
+         "message" :  "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+         "type"    :  "no-color",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1000,
+         "message" :  "Redefinition of \u201Cpadding-bottom\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1000,
+         "message" :  "Redefinition of \u201Cpadding-left\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1000,
+         "message" :  "Redefinition of \u201Cpadding-top\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1000,
+         "message" :  "Redefinition of \u201Cpadding-right\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1001,
+         "message" :  "Redefinition of \u201Cdisplay\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1005,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1007,
+         "message" :  "Redefinition of \u201Cdisplay\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1008,
+         "message" :  "Redefinition of \u201Cfont-size\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1009,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1009,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1009,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "file://localhost/TextArea",
+         "line"    : 1009,
+         "message" :  "Redefinition of \u201Cgap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Ccolumn-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+     ,
+      {
+         "source"  : "$esc.java($warning.SourceFile)",
+         "line"    : 0,
+         "message" :  "Redefinition of \u201Crow-gap\u201D",
+         "type"    :  "redefinition",
+         "level"   : 2
+      }
+                     ]
+    }
+}

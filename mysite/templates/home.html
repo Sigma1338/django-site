@@ -55,9 +55,9 @@
           <a class="btn btn--outline btn--lg" href="{% url 'league:tournaments' %}">Смотреть турниры</a>
         </div>
         <div class="hero__stats">
-          <div><b>12</b><span>турниров в сезоне</span></div>
-          <div><b>48</b><span>команд</span></div>
-          <div><b>1057</b><span>игроков в базе</span></div>
+          <div><b>{{ stats.tournaments }}</b><span>турниров в сезоне</span></div>
+          <div><b>{{ stats.teams }}</b><span>команд</span></div>
+          <div><b>{{ stats.players }}</b><span>игроков в базе</span></div>
         </div>
       </div>
 
@@ -100,68 +100,37 @@
 
       <div class="grid cols-3">
 
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge badge--success">Идут заявки</span>
-            <span class="small muted">5×5</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Кубок Ульяновска по мини-футболу</h3>
-            <div class="tcard__meta">
-              <span>1 — 20 декабря 2026</span>
-              <span>Ульяновск · Спортзал УлГТУ</span>
+        {% for tournament in tournaments %}
+          <article class="card tcard">
+            <div class="tcard__top">
+              {% if tournament.status == 'published' %}
+                <span class="badge badge--success">Идут заявки</span>
+              {% else %}
+                <span class="badge badge--warning">Черновик</span>
+              {% endif %}
+              <span class="small muted">{{ tournament.get_format_display }}</span>
             </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>7 из 12</b></div>
+            <div class="tcard__body">
+              <h3 class="tcard__title">{{ tournament.title }}</h3>
+              <div class="tcard__meta">
+                <span>{{ tournament.start_date|date:"j E Y" }} — {{ tournament.end_date|date:"j E Y" }}</span>
+                <span>{{ tournament.venue|default:"Ульяновск" }}</span>
+              </div>
+              <div class="mt-16">
+                <div class="spread small"><span class="muted">Заявлено команд</span><b>{{ tournament.applications.count }} из {{ tournament.team_limit }}</b></div>
+              </div>
             </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">6 000 ₽ <small>/ взнос</small></span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'cup-ulyanovsk-2026' %}">Подробнее</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge badge--warning">Скоро</span>
-            <span class="small muted">5×5</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Зимняя лига 2027</h3>
-            <div class="tcard__meta">
-              <span>15 января — 28 февраля 2027</span>
-              <span>Ульяновск · ФОК «Олимп»</span>
+            <div class="tcard__foot">
+              <span class="price">{{ tournament.fee }} ₽ <small>/ взнос</small></span>
+              <a class="btn btn--outline btn--sm" href="{{ tournament.get_absolute_url }}">Подробнее</a>
             </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>0 из 16</b></div>
-            </div>
+          </article>
+        {% empty %}
+          <div class="card">
+            <h3 class="h3">Ближайших турниров пока нет</h3>
+            <p class="muted mt-8">Следите за обновлениями календаря.</p>
           </div>
-          <div class="tcard__foot">
-            <span class="price">7 500 ₽ <small>/ взнос</small></span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'winter-cup-foot73' %}">Подробнее</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge">Идёт</span>
-            <span class="small muted">8×8</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Турнир выходного дня</h3>
-            <div class="tcard__meta">
-              <span>23 ноября 2026</span>
-              <span>Ульяновск · «Юность»</span>
-            </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>6 из 8</b></div>
-            </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">2 000 ₽ <small>/ взнос</small></span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'league-weekend' %}">Подробнее</a>
-          </div>
-        </article>
+        {% endfor %}
 
       </div>
     </div>

@@ -11,6 +11,7 @@ urlpatterns = [
     path('tables/', views.tables, name='tables'),
     path('teams/', views.teams, name='teams'),
     path('apply/', views.apply, name='apply'),
+    path('apply/success/<int:pk>/', views.apply_success, name='apply_success'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('account/', views.account, name='account'),

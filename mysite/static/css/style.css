@@ -560,7 +560,6 @@ a:focus-visible,
 .note--success { background: #e7f2ec; color: #2f6b4f; border-left-color: #2f6b4f; }
 .note--error { background: #fbe9e7; color: #b3261e; border-left-color: #b3261e; }
 
-/* ---------- 13. Экраны ---------- */
 
 .auth {
   min-height: 580px;
@@ -622,7 +621,6 @@ a:focus-visible,
 .facts__row span { color: #6f6a60; }
 .facts__row b { text-align: right; }
 
-/* ---------- 14. CTA ---------- */
 
 .cta { background: #1e2a44; color: #ffffff; padding: 64px 0; }
 
@@ -638,7 +636,6 @@ a:focus-visible,
 .cta p { color: #c3cbdb; margin-top: 12px; max-width: 560px; }
 .cta__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* ---------- 15. Подвал ---------- */
 
 .footer { background: #171f31; color: #c8cfdc; padding: 56px 0 32px; }
 
@@ -668,7 +665,6 @@ a:focus-visible,
   flex-wrap: wrap;
 }
 
-/* ---------- 16. UI-kit ---------- */
 
 .ui-sec { padding: 56px 0; border-top: 1px solid #e3ddd1; }
 .ui-sec:first-of-type { border-top: 0; }
@@ -771,7 +767,6 @@ a:focus-visible,
 .fields-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .badge-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
 
-/* статичные состояния для макетов */
 
 .btn--accent.is-hover { background: #c24420; }
 .btn--accent.is-pressed { background: #a83718; }

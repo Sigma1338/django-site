@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заявка принята — FOOT73</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Сезон 2026/2027 · любительская лига Ульяновска</span>
+    <a href="{% url 'league:apply' %}">Приём заявок до 20 ноября &rarr;</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{% url 'league:home' %}">
+      <span class="logo__mark">F73</span>
+      <span class="logo__text"><b>FOOT73</b><small>Ульяновск</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a href="{% url 'league:tournaments' %}">Турниры</a>
+      <a href="{% url 'league:tables' %}">Таблицы</a>
+      <a href="{% url 'league:teams' %}">Команды</a>
+      <a href="{% url 'league:home' %}#about">О лиге</a>
+    </nav>
+
+    <div class="header__actions">
+      {% if user.is_staff %}
+        <a class="btn btn--ghost" href="{% url 'league:panel' %}">Админка</a>
+      {% else %}
+        <a class="btn btn--ghost" href="{% url 'league:login' %}">Войти</a>
+      {% endif %}
+      <a class="btn btn--accent" href="{% url 'league:apply' %}">Подать заявку</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span>Заявка принята</div>
+
+      <div class="card" style="max-width:820px;margin:0 auto">
+        <span class="badge badge--success">Заявка принята</span>
+        <h1 class="h2 mt-12">Команда «{{ application.team }}» в списке</h1>
+        <p class="muted mt-8">Номер заявки — {{ application.pk }}. Организатор проверит данные и изменит статус в панели управления.</p>
+
+        <div class="facts mt-24">
+          <div class="facts__row"><span>Турнир</span><b>{{ application.tournament.title }}</b></div>
+          <div class="facts__row"><span>Капитан</span><b>{{ application.captain }}</b></div>
+          <div class="facts__row"><span>Город</span><b>{{ application.city|default:"—" }}</b></div>
+          <div class="facts__row"><span>Игроков</span><b>{{ application.players_count }}</b></div>
+          <div class="facts__row"><span>Статус</span><b>{{ application.get_status_display }}</b></div>
+          <div class="facts__row"><span>Подана</span><b>{{ application.created_at|date:"d.m.Y H:i" }}</b></div>
+        </div>
+
+        <div class="row mt-24" style="flex-wrap:wrap">
+          <a class="btn btn--accent" href="{% url 'league:home' %}">На главную</a>
+          <a class="btn btn--outline" href="{% url 'league:apply' %}">Ещё одна заявка</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col" style="max-width:300px">
+        <b>FOOT73</b>
+        <span>Любительская лига мини-футбола Ульяновска. Турниры, заявки, таблицы и расписание.</span>
+      </div>
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="{% url 'league:tournaments' %}">Турниры</a>
+        <a href="{% url 'league:tables' %}">Таблицы</a>
+        <a href="{% url 'league:teams' %}">Команды</a>
+        <a href="{% url 'league:apply' %}">Подать заявку</a>
+        <a href="{% url 'league:login' %}">Личный кабинет</a>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <span>+7 900 000-00-00</span>
+        <span>info@foot73.ru</span>
+        <span>Ульяновск, ул. Северный Венец, 32</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 FOOT73. Учебный проект.</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

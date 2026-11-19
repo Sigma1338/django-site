@@ -1,0 +1,54 @@
+[
+  {
+    "page": "01_home",
+    "errors": []
+  },
+  {
+    "page": "02_tournaments",
+    "errors": []
+  },
+  {
+    "page": "03_tournament_detail",
+    "errors": []
+  },
+  {
+    "page": "04_tables",
+    "errors": []
+  },
+  {
+    "page": "05_teams",
+    "errors": []
+  },
+  {
+    "page": "06_search",
+    "errors": []
+  },
+  {
+    "page": "07_apply",
+    "errors": []
+  },
+  {
+    "page": "08_apply_success",
+    "errors": []
+  },
+  {
+    "page": "09_about",
+    "errors": []
+  },
+  {
+    "page": "10_contacts",
+    "errors": []
+  },
+  {
+    "page": "11_login",
+    "errors": []
+  },
+  {
+    "page": "12_account",
+    "errors": []
+  },
+  {
+    "page": "13_admin_panel",
+    "errors": []
+  }
+]

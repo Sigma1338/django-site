@@ -56,65 +56,74 @@
     <div class="container">
       <div class="grid split">
 
-        <form class="card form">
+        <form class="card form" method="post" action="{% url 'league:apply' %}">
+          {% csrf_token %}
 
-          <div class="field">
-            <label for="tournament">Турнир <span class="req">*</span></label>
-            <select class="select" id="tournament" required>
-              <option value="" selected disabled>Выберите турнир</option>
-              <option>Кубок Ульяновска по мини-футболу · 5×5</option>
-              <option>Зимняя лига 2027 · 5×5</option>
-              <option>Турнир выходного дня · 8×8</option>
-            </select>
+          {% if form.non_field_errors %}
+            <div class="note note--error">{{ form.non_field_errors }}</div>
+          {% endif %}
+
+          <div class="field{% if form.tournament.errors %} field--error{% endif %}">
+            <label for="{{ form.tournament.id_for_label }}">Турнир <span class="req">*</span></label>
+            {{ form.tournament }}
+            {% for error in form.tournament.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
             <span class="hint">Приём заявок до 20 ноября 2026</span>
           </div>
 
           <div class="field-row">
-            <div class="field">
-              <label for="team">Название команды <span class="req">*</span></label>
-              <input class="input" id="team" type="text" placeholder="Например: Волга" required>
-              <span class="hint">От 3 до 40 символов</span>
+            <div class="field{% if form.team.errors %} field--error{% endif %}">
+              <label for="{{ form.team.id_for_label }}">Название команды <span class="req">*</span></label>
+              {{ form.team }}
+              {% for error in form.team.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
+              <span class="hint">От 3 до 80 символов</span>
             </div>
-            <div class="field">
-              <label for="city">Город <span class="req">*</span></label>
-              <input class="input" id="city" type="text" placeholder="Ульяновск" required>
+            <div class="field{% if form.city.errors %} field--error{% endif %}">
+              <label for="{{ form.city.id_for_label }}">Город</label>
+              {{ form.city }}
+              {% for error in form.city.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
             </div>
           </div>
 
           <div class="field-row">
-            <div class="field">
-              <label for="captain">Капитан: ФИО <span class="req">*</span></label>
-              <input class="input" id="captain" type="text" placeholder="Фамилия Имя Отчество" required>
+            <div class="field{% if form.captain.errors %} field--error{% endif %}">
+              <label for="{{ form.captain.id_for_label }}">Капитан: ФИО <span class="req">*</span></label>
+              {{ form.captain }}
+              {% for error in form.captain.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
             </div>
-            <div class="field">
-              <label for="phone">Телефон <span class="req">*</span></label>
-              <input class="input" id="phone" type="tel" placeholder="+7 900 000-00-00" required>
+            <div class="field{% if form.phone.errors %} field--error{% endif %}">
+              <label for="{{ form.phone.id_for_label }}">Телефон</label>
+              {{ form.phone }}
+              {% for error in form.phone.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
               <span class="hint">В формате +7 900 000-00-00</span>
             </div>
           </div>
 
           <div class="field-row">
-            <div class="field">
-              <label for="email">E-mail <span class="req">*</span></label>
-              <input class="input" id="email" type="email" placeholder="captain@mail.ru" required>
+            <div class="field{% if form.email.errors %} field--error{% endif %}">
+              <label for="{{ form.email.id_for_label }}">E-mail</label>
+              {{ form.email }}
+              {% for error in form.email.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
               <span class="hint">На него придёт подтверждение заявки</span>
             </div>
-            <div class="field">
-              <label for="players">Игроков в составе <span class="req">*</span></label>
-              <input class="input" id="players" type="number" min="5" max="12" required>
+            <div class="field{% if form.players_count.errors %} field--error{% endif %}">
+              <label for="{{ form.players_count.id_for_label }}">Игроков в составе <span class="req">*</span></label>
+              {{ form.players_count }}
+              {% for error in form.players_count.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
               <span class="hint">Минимум 5, максимум 12</span>
             </div>
           </div>
 
-          <div class="field">
-            <label for="comment">Комментарий организатору</label>
-            <textarea class="textarea" id="comment" placeholder="Например: нужен перенос матча 1-го тура"></textarea>
+          <div class="field{% if form.comment.errors %} field--error{% endif %}">
+            <label for="{{ form.comment.id_for_label }}">Комментарий организатору</label>
+            {{ form.comment }}
+            {% for error in form.comment.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
           </div>
 
-          <label class="check">
-            <input type="checkbox" required>
+          <label class="check{% if form.consent.errors %} field--error{% endif %}">
+            {{ form.consent }}
             <span>Согласен на обработку персональных данных и с регламентом турнира</span>
           </label>
+          {% for error in form.consent.errors %}<span class="error-text">{{ error }}</span>{% endfor %}
 
           <div class="row" style="flex-wrap:wrap">
             <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>

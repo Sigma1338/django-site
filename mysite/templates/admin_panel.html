@@ -116,6 +116,12 @@
                         {% endif %}
                       </td>
                       <td class="right">
+                        <form method="post" style="display:inline">
+                          {% csrf_token %}
+                          <input type="hidden" name="application" value="{{ application.pk }}">
+                          <button class="btn btn--outline btn--sm" type="submit" name="action" value="approve">Одобрить</button>
+                          <button class="btn btn--outline btn--sm" type="submit" name="action" value="reject">Отклонить</button>
+                        </form>
                         <a class="btn btn--outline btn--sm" href="{% url 'admin:web_application_change' application.pk %}">Открыть</a>
                       </td>
                     </tr>

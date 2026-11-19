@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Кубок Ульяновска — FOOT73</title>
+  <title>{{ tournament.title }} — FOOT73</title>
   <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -46,14 +46,18 @@
 
   <section class="section section--tight-bottom">
     <div class="container">
-      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span><a href="{% url 'league:tournaments' %}">Турниры</a><span>/</span>Кубок Ульяновска</div>
+      <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span><a href="{% url 'league:tournaments' %}">Турниры</a><span>/</span>{{ tournament.title }}</div>
       <div class="spread" style="align-items:flex-start;flex-wrap:wrap">
         <div>
-          <span class="badge badge--success">Идут заявки</span>
-          <h1 class="h1 mt-12">Кубок Ульяновска по мини-футболу</h1>
-          <p class="lead mt-12">Главный любительский турнир сезона. 12 команд, групповой этап и плей-офф.</p>
+          {% if tournament.status == 'published' %}
+            <span class="badge badge--success">Идут заявки</span>
+          {% else %}
+            <span class="badge badge--warning">Черновик</span>
+          {% endif %}
+          <h1 class="h1 mt-12">{{ tournament.title }}</h1>
+          <p class="lead mt-12">{{ tournament.get_format_display }} · {{ tournament.venue|default:"Ульяновск" }} · до {{ tournament.team_limit }} команд.</p>
         </div>
-        <a class="btn btn--accent btn--lg" href="{% url 'league:apply' %}">Подать заявку</a>
+        <a class="btn btn--accent btn--lg" href="{% url 'league:apply' %}?tournament={{ tournament.pk }}">Подать заявку</a>
       </div>
 
       <div class="tabs">
@@ -74,7 +78,7 @@
 
           <div class="card" id="overview">
             <h2 class="h3">О турнире</h2>
-            <p class="mt-12">Кубок Ульяновска проходит по правилам мини-футбола 5×5. Сначала групповой этап в двух дивизионах, затем плей-офф среди двух лучших команд каждого дивизиона.</p>
+            <p class="mt-12">{{ tournament.title }} проходит по правилам мини-футбола {{ tournament.get_format_display }}. Сначала групповой этап, затем плей-офф среди лучших команд.</p>
             <p class="mt-12 muted">Матчи проходят по выходным, продолжительность — 2 тайма по 20 минут. Заявка рассматривается организатором в течение одного рабочего дня.</p>
           </div>
 
@@ -210,20 +214,20 @@
         <aside class="stack">
           <div class="card">
             <h2 class="h3">Заявка</h2>
-            <div class="spread mt-12 small"><span class="muted">Заявлено команд</span><b>7 из 12</b></div>
-            <p class="small muted mt-8">Свободно ещё 5 мест. Приём заявок до 20 ноября.</p>
-            <a class="btn btn--primary btn--block mt-16" href="{% url 'league:apply' %}">Подать заявку</a>
-            <p class="small muted mt-8" style="text-align:center">Взнос 6 000 ₽ с команды</p>
+            <div class="spread mt-12 small"><span class="muted">Заявлено команд</span><b>{{ applications_count }} из {{ tournament.team_limit }}</b></div>
+            <p class="small muted mt-8">Свободно ещё {{ free_places }} мест. Приём заявок до 20 ноября.</p>
+            <a class="btn btn--primary btn--block mt-16" href="{% url 'league:apply' %}?tournament={{ tournament.pk }}">Подать заявку</a>
+            <p class="small muted mt-8" style="text-align:center">Взнос {{ tournament.fee }} ₽ с команды</p>
           </div>
 
           <div class="card">
             <h2 class="h3">Факты</h2>
             <div class="facts mt-16">
-              <div class="facts__row"><span>Даты</span><b>1 — 20 декабря</b></div>
-              <div class="facts__row"><span>Формат</span><b>5×5</b></div>
-              <div class="facts__row"><span>Команд</span><b>12</b></div>
+              <div class="facts__row"><span>Даты</span><b>{{ tournament.start_date|date:"j E" }} — {{ tournament.end_date|date:"j E Y" }}</b></div>
+              <div class="facts__row"><span>Формат</span><b>{{ tournament.get_format_display }}</b></div>
+              <div class="facts__row"><span>Команд</span><b>{{ tournament.team_limit }}</b></div>
               <div class="facts__row"><span>Город</span><b>Ульяновск</b></div>
-              <div class="facts__row"><span>Площадка</span><b>Спортзал УлГТУ</b></div>
+              <div class="facts__row"><span>Площадка</span><b>{{ tournament.venue|default:"Спортзал УлГТУ" }}</b></div>
             </div>
           </div>
 

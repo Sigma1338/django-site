@@ -48,7 +48,7 @@
     <div class="container">
       <div class="crumbs"><a href="{% url 'league:home' %}">Главная</a><span>/</span>Турниры</div>
       <h1 class="h1">Турниры</h1>
-      <p class="lead mt-12">12 турниров сезона 2026/2027: кубки, лиги и турниры выходного дня.</p>
+      <p class="lead mt-12">Календарь турниров сезона 2026/2027: кубки, лиги и турниры выходного дня.</p>
     </div>
   </section>
 
@@ -77,131 +77,37 @@
 
       <div class="grid cols-3">
 
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge badge--success">Идут заявки</span>
-            <span class="small muted">5×5</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Кубок Ульяновска по мини-футболу</h3>
-            <div class="tcard__meta">
-              <span>1 — 20 декабря 2026</span>
-              <span>Спортзал УлГТУ</span>
+        {% for tournament in tournaments %}
+          <article class="card tcard">
+            <div class="tcard__top">
+              {% if tournament.status == 'published' %}
+                <span class="badge badge--success">Идут заявки</span>
+              {% else %}
+                <span class="badge badge--warning">Черновик</span>
+              {% endif %}
+              <span class="small muted">{{ tournament.get_format_display }}</span>
             </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>7 из 12</b></div>
+            <div class="tcard__body">
+              <h3 class="tcard__title">{{ tournament.title }}</h3>
+              <div class="tcard__meta">
+                <span>{{ tournament.start_date|date:"j E Y" }} — {{ tournament.end_date|date:"j E Y" }}</span>
+                <span>{{ tournament.venue|default:"Ульяновск" }}</span>
+              </div>
+              <div class="mt-16">
+                <div class="spread small"><span class="muted">Заявлено команд</span><b>{{ tournament.applications.count }} из {{ tournament.team_limit }}</b></div>
+              </div>
             </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">6 000 ₽</span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'cup-ulyanovsk-2026' %}">Подробнее</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge badge--warning">Скоро</span>
-            <span class="small muted">5×5</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Зимняя лига 2027</h3>
-            <div class="tcard__meta">
-              <span>15 января — 28 февраля 2027</span>
-              <span>ФОК «Олимп»</span>
+            <div class="tcard__foot">
+              <span class="price">{{ tournament.fee }} ₽</span>
+              <a class="btn btn--outline btn--sm" href="{{ tournament.get_absolute_url }}">Подробнее</a>
             </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>0 из 16</b></div>
-            </div>
+          </article>
+        {% empty %}
+          <div class="card">
+            <h3 class="h3">Пока нет турниров</h3>
+            <p class="muted mt-8">Опубликованные турниры появятся здесь.</p>
           </div>
-          <div class="tcard__foot">
-            <span class="price">7 500 ₽</span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'winter-cup-foot73' %}">Подробнее</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge">Идёт</span>
-            <span class="small muted">8×8</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Турнир выходного дня</h3>
-            <div class="tcard__meta">
-              <span>23 ноября 2026</span>
-              <span>«Юность»</span>
-            </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>6 из 8</b></div>
-            </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">2 000 ₽</span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'league-weekend' %}">Подробнее</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge badge--success">Идут заявки</span>
-            <span class="small muted">8×8</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Осенний кубок города</h3>
-            <div class="tcard__meta">
-              <span>5 — 19 октября 2026</span>
-              <span>«Юность»</span>
-            </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>9 из 10</b></div>
-            </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">4 000 ₽</span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'student-league' %}">Подробнее</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge">Завершён</span>
-            <span class="small muted">5×5</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Летняя лига 2026</h3>
-            <div class="tcard__meta">
-              <span>1 июня — 30 августа 2026</span>
-              <span>Спортзал УлГТУ</span>
-            </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>12 из 12</b></div>
-            </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">5 000 ₽</span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'night-league' %}">Итоги</a>
-          </div>
-        </article>
-
-        <article class="card tcard">
-          <div class="tcard__top">
-            <span class="badge badge--warning">Скоро</span>
-            <span class="small muted">5×5</span>
-          </div>
-          <div class="tcard__body">
-            <h3 class="tcard__title">Кубок первокурсника</h3>
-            <div class="tcard__meta">
-              <span>12 — 26 сентября 2026</span>
-              <span>УлГТУ</span>
-            </div>
-            <div class="mt-16">
-              <div class="spread small"><span class="muted">Заявлено команд</span><b>2 из 8</b></div>
-            </div>
-          </div>
-          <div class="tcard__foot">
-            <span class="price">1 500 ₽</span>
-            <a class="btn btn--outline btn--sm" href="{% url 'league:tournament_detail' 'veterans-cup' %}">Подробнее</a>
-          </div>
-        </article>
+        {% endfor %}
 
       </div>
 

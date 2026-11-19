@@ -1,0 +1,145 @@
+{
+  "01_home": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "02_tournaments": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "03_tournament_detail": {
+    "total": 7,
+    "errors": [],
+    "warnings": [
+      {
+        "type": "info",
+        "lastLine": 193,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      },
+      {
+        "type": "info",
+        "lastLine": 205,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      },
+      {
+        "type": "info",
+        "lastLine": 217,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      },
+      {
+        "type": "info",
+        "lastLine": 229,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      },
+      {
+        "type": "info",
+        "lastLine": 241,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      },
+      {
+        "type": "info",
+        "lastLine": 253,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      },
+      {
+        "type": "info",
+        "lastLine": 265,
+        "lastColumn": 30,
+        "firstColumn": 9,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": " \n        <article class=\"card\">\n     ",
+        "hiliteStart": 10,
+        "hiliteLength": 22
+      }
+    ]
+  },
+  "04_tables": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "05_teams": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "06_search": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "07_apply": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "08_apply_success": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "09_about": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "10_contacts": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "11_login": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "12_account": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "13_admin_panel": {
+    "total": 0,
+    "errors": [],
+    "warnings": []
+  }
+}

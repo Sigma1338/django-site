@@ -1,0 +1,210 @@
+[
+  {
+    "page": "01_home",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 2897,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\01_home.png"
+  },
+  {
+    "page": "02_tournaments",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 4252,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\02_tournaments.png"
+  },
+  {
+    "page": "03_tournament_detail",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 2932,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\03_tournament_detail.png"
+  },
+  {
+    "page": "04_tables",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1270,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\04_tables.png"
+  },
+  {
+    "page": "05_teams",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1258,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\05_teams.png"
+  },
+  {
+    "page": "06_search",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 2333,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\06_search.png"
+  },
+  {
+    "page": "07_apply",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 2227,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\07_apply.png"
+  },
+  {
+    "page": "08_apply_success",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1155,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\08_apply_success.png"
+  },
+  {
+    "page": "09_about",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1241,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\09_about.png"
+  },
+  {
+    "page": "10_contacts",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1178,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\10_contacts.png"
+  },
+  {
+    "page": "11_login",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1111,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\11_login.png"
+  },
+  {
+    "page": "12_account",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 1681,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\12_account.png"
+  },
+  {
+    "page": "13_admin_panel",
+    "size": "desktop_1440",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "height": 2423,
+    "file": "D:\\papka\\django\\docs\\screenshots\\desktop_1440\\13_admin_panel.png"
+  },
+  {
+    "page": "01_home",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 4542,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\01_home.png"
+  },
+  {
+    "page": "02_tournaments",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 10326,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\02_tournaments.png"
+  },
+  {
+    "page": "03_tournament_detail",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 3959,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\03_tournament_detail.png"
+  },
+  {
+    "page": "04_tables",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 1416,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\04_tables.png"
+  },
+  {
+    "page": "05_teams",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 1796,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\05_teams.png"
+  },
+  {
+    "page": "06_search",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 4694,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\06_search.png"
+  },
+  {
+    "page": "07_apply",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 2462,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\07_apply.png"
+  },
+  {
+    "page": "08_apply_success",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 1457,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\08_apply_success.png"
+  },
+  {
+    "page": "09_about",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 2345,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\09_about.png"
+  },
+  {
+    "page": "10_contacts",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 1402,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\10_contacts.png"
+  },
+  {
+    "page": "11_login",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 1315,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\11_login.png"
+  },
+  {
+    "page": "12_account",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 2256,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\12_account.png"
+  },
+  {
+    "page": "13_admin_panel",
+    "size": "mobile_375",
+    "viewport": 375,
+    "scrollWidth": 375,
+    "height": 3172,
+    "file": "D:\\papka\\django\\docs\\screenshots\\mobile_375\\13_admin_panel.png"
+  }
+]
